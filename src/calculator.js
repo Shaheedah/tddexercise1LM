@@ -1,36 +1,36 @@
 class Calculator{
     constructor(){
-        this.lastNum = 0;
+        this.last = 0;
         this.slot = [];
     }
     //add numbers
-    addNum(){
+    add(){
         var sum = 0;
         for(let i = 0; i<arguments.length; i++){
             sum += arguments[i];
         }
-        this.lastNum = sum;
+        this.last = sum;
         return sum;
     }
 
 
     //muiltiply numbers
-    multiplyNum(){
+    multiply(){
         var product = 1;
         for(let i = 0; i<arguments.length; i++){
             product *= arguments[i];
         }
-        this.lastNum = product;
+        this.last = product;
         return product;
     }
 
     //return last
     last(){
-        return this.lastNum;
+        return this.last;
     }
     
     set_slot(number){
-        this.slot[number] = this.lastNum;
+        this.slot[number] = this.last;
     }
     
     get_slot(number){
