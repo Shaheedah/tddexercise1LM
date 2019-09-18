@@ -54,7 +54,7 @@ describe("Calculator.multiply", function(){
 });
 
 
-//last
+//LAST
 describe("Calculator last", function(){
     let answer = new Calculator();
     it("should return 2", function(){
