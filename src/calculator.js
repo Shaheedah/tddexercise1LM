@@ -1,4 +1,5 @@
-class Calculator{
+
+module.exports = class Calculator{
     constructor(){
         this.last = 0;
         this.slot = [];
@@ -37,4 +38,3 @@ class Calculator{
         return this.slot[number];
     }
 };
-

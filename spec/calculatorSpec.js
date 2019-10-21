@@ -1,5 +1,7 @@
+const Calculator = require("./../src/calculator")
+
 //add numbers
-describe("Calculator.add", function(){
+describe("add()", function(){
     let answer = new Calculator();
   it("should add two numbers and return 0", function(){
       let result = answer.add(0,0);
@@ -35,7 +37,7 @@ describe("Calculator.add", function(){
   });
 
 //multiply numbers
-describe("Calculator.multiply", function(){
+describe("multiply()", function(){
     let answer = new Calculator();
     it("should multiply two numbers and return 2", function(){
         let result = answer.multiply(1,2);
@@ -55,36 +57,36 @@ describe("Calculator.multiply", function(){
 
 
 //LAST
-describe("Calculator last", function(){
+describe("last()", function(){
     let answer = new Calculator();
     it("should return 2", function(){
         answer.multiply(1,2);
-        let result = answer.last();
+        let result = answer.last;
         expect(result).toBe(2);
     })
     
     it("should return 3", function(){
         answer.add(1,2);
-        let result = answer.last();
+        let result = answer.last;
         expect(result).toBe(3);
     })
     
     it("should return 7", function(){
         answer.add(1,2);
-        let result = answer.add(answer.last(), 4);
+        let result = answer.add(answer.last, 4);
         expect(result).toBe(7);
     })
     
       it("should return 15", function(){
         answer.add(1,2);
-        let result = answer.multiply(answer.last(), 5);
+        let result = answer.multiply(answer.last, 5);
         expect(result).toBe(15);
     })
     
 });
 
 //Memory Slots
-describe("Calculator numbered memory slots", function(){
+describe("set_slot()", function(){
     let answer = new Calculator();
     it("should return 3", function(){
         answer.add(1,2);
